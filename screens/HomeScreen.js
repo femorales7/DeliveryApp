@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, Image, TextInput } from "react-native";
+import { View, Text, SafeAreaView, Image, TextInput, ScrollView } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import {
@@ -9,6 +9,8 @@ import {
   AdjustmentsVerticalIcon,
   MagnifyingGlassIcon,
 } from "react-native-heroicons/outline";
+// import { ScrollView } from "react-native-web";
+import Categories from "./Components/categories";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -51,6 +53,17 @@ const HomeScreen = () => {
           </View>
           <AdjustmentsVerticalIcon className="space-x-4"  color="#00CCBB" />
         </View>
+
+      {/* Body */}
+
+      <ScrollView className ="bg-gray-100" >
+        {/* Categories */}
+        <Categories />
+
+        {/* Fetarure Rows */}
+
+
+      </ScrollView>
       </Text>
     </SafeAreaView>
   );
